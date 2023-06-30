@@ -6,3 +6,175 @@
 
 # Compiled Pre-Linked Libraries
 *.plx
+
+***********************************************************
+CREATE TABLE tipos(
+id_tipo INT (10) NOT NULL,
+el_tipo VARCHAR (30)
+);
+
+***********************************************************
+CREATE TABLE productos(
+id_productos INT (20)NOT NULL,
+nombre VARCHAR (40),
+precio VARCHAR (40),
+numeor_de_tipo VARCHAR(40),
+numero_de_marca VARCHAR (40)
+);
+
+***********************************************************
+CREATE TABLE marca(
+id_marca INT (10)NOT NULL,
+la_marca VARCHAR (30)
+);
+
+***********************************************************
+
+INSERT INTO productos VALUES('00100','chocolates','5','00100','00100');
+INSERT INTO productos VALUES('00200','jugo','20','00200','00200');
+***************************************************************************************************************************************************************
+INSERT INTO productos VALUES('00300','tortas','45','00300','00300');***************************************************
+INSERT INTO productos VALUES('00400','tortas','45','00400','00400');
+INSERT INTO productos VALUES('00500','tortas','45','00500','00500');
+INSERT INTO productos VALUES('00600','tortas','45','00600','00600');
+INSERT INTO productos VALUES('00700','tortas','45','00700','00700');
+INSERT INTO productos VALUES('00800','tortas','45','00800','00800');
+INSERT INTO productos VALUES('00900','tortas','45','00900','00900');
+INSERT INTO productos VALUES('01000','tortas','45','01000','01000');
+INSERT INTO productos VALUES('01100','tortas','45','01100','01100');
+INSERT INTO productos VALUES('01200','tortas','45','01200','01200');
+INSERT INTO productos VALUES('01300','tortas','45','01300','01300');
+INSERT INTO productos VALUES('01400','tortas','45','01400','01400');
+INSERT INTO productos VALUES('01500','tortas','45','01500','01500');********************************************************
+
+INSERT INTO productos VALUES('01600','quseadillas','20','01600','01600');**************************************************
+INSERT INTO productos VALUES('01700','quseadillas','20','01700','01700');
+INSERT INTO productos VALUES('01800','quseadillas','20','01800','01800');
+INSERT INTO productos VALUES('01900','quseadillas','20','01900','01900');
+INSERT INTO productos VALUES('02000','quseadillas','20','02000','02000');*****************************************************
+
+INSERT INTO productos VALUES('02100','aguas','25','02100','02100');****************************************************
+INSERT INTO productos VALUES('02200','aguas','25','02200','02200');
+INSERT INTO productos VALUES('02300','aguas','25','02300','02300');
+INSERT INTO productos VALUES('02400','aguas','25','02400','02400');
+INSERT INTO productos VALUES('02500','aguas','25','02500','02500');
+INSERT INTO productos VALUES('02600','aguas','25','02600','02600');
+INSERT INTO productos VALUES('02700','aguas','25','02700','02700');
+INSERT INTO productos VALUES('02800','aguas','25','02800','02800');
+INSERT INTO productos VALUES('02900','aguas','25','02900','02900');
+INSERT INTO productos VALUES('03000','aguas','25','03000','03000');*****************************************************
+***********************************************************
+
+INSERT INTO tipos VALUES('00100','patito');
+INSERT INTO tipos VALUES('00200','boing');
+***************************************************************************************************************************************************************
+INSERT INTO tipos VALUES('00300','queso');
+INSERT INTO tipos VALUES('00400','mexicana');
+INSERT INTO tipos VALUES('00500','hawayana');
+INSERT INTO tipos VALUES('00600','salchicha');
+INSERT INTO tipos VALUES('00700','jamon');
+INSERT INTO tipos VALUES('00800','tesoem');
+INSERT INTO tipos VALUES('00900','como_quieras');
+INSERT INTO tipos VALUES('01000','al_pastor');
+INSERT INTO tipos VALUES('01100','loganisa');
+INSERT INTO tipos VALUES('01200','toxino');
+INSERT INTO tipos VALUES('01300','huevo');
+INSERT INTO tipos VALUES('01400','frijoles');
+INSERT INTO tipos VALUES('01500','carnitas');
+***************************************************************************************************************************************************************
+INSERT INTO tipos VALUES('01600','queso');
+INSERT INTO tipos VALUES('01700','frijoles');
+INSERT INTO tipos VALUES('01800','jamon');
+INSERT INTO tipos VALUES('01900','carne');
+INSERT INTO tipos VALUES('02000','chile');
+***************************************************************************************************************************************************************
+INSERT INTO tipos VALUES('02100','simple');
+INSERT INTO tipos VALUES('02200','naranja');
+INSERT INTO tipos VALUES('02300','uva');
+INSERT INTO tipos VALUES('02400','sandia');
+INSERT INTO tipos VALUES('02500','durasno');
+INSERT INTO tipos VALUES('02600','orchata');
+INSERT INTO tipos VALUES('02700','arros');
+INSERT INTO tipos VALUES('02800','jamica');
+INSERT INTO tipos VALUES('02900','ceresa');
+INSERT INTO tipos VALUES('03000','cafe');
+
+******************no_tiene_relacicion_con_la_primera_tabla**********************************************************************************************************************************************************************
+INSERT INTO tipos VALUES('03100','cemento');
+INSERT INTO tipos VALUES('03200','papel');
+INSERT INTO tipos VALUES('03300','carros');
+INSERT INTO tipos VALUES('03400','perros');
+INSERT INTO tipos VALUES('03500','tekefonos');
+
+
+***********************************************************
+
+INSERT INTO marca VALUES('00100','del amion');
+INSERT INTO marca VALUES('00200','del aguera');
+***************************************************************************************************************************************************************
+INSERT INTO marca VALUES('00300','El_tio_cholo');
+INSERT INTO marca VALUES('00400','El_tio_cholo');
+INSERT INTO marca VALUES('00500','El_tio_cholo');
+INSERT INTO marca VALUES('00600','El_tio_cholo');
+INSERT INTO marca VALUES('00700','El_tio_cholo');
+INSERT INTO marca VALUES('00800','El_tio_cholo');
+INSERT INTO marca VALUES('00900','El_tio_cholo');
+INSERT INTO marca VALUES('01000','El_tio_cholo');
+INSERT INTO marca VALUES('01100','El_tio_cholo');
+INSERT INTO marca VALUES('01200','El_tio_cholo');
+INSERT INTO marca VALUES('01300','El_tio_cholo');
+INSERT INTO marca VALUES('01400','El_tio_cholo');
+INSERT INTO marca VALUES('01500','El_tio_cholo');
+***************************************************************************************************************************************************************
+
+INSERT INTO marca VALUES('01600','la_tia');
+INSERT INTO marca VALUES('01700','la_tia');
+INSERT INTO marca VALUES('01800','la_tia');
+INSERT INTO marca VALUES('01900','la_tia');
+INSERT INTO marca VALUES('02000','la_tia');
+***************************************************************************************************************************************************************
+INSERT INTO marca VALUES('02100','la_doñoa');
+INSERT INTO marca VALUES('02200','la_doñoa');
+INSERT INTO marca VALUES('02300','la_doñoa');
+INSERT INTO marca VALUES('02400','la_doñoa');
+INSERT INTO marca VALUES('02500','la_doñoa');
+INSERT INTO marca VALUES('02600','la_doñoa');
+INSERT INTO marca VALUES('02700','la_doñoa');
+INSERT INTO marca VALUES('02800','la_doñoa');
+INSERT INTO marca VALUES('02900','la_doñoa');
+INSERT INTO marca VALUES('03000','la_doñoa');
+
+
+****************************no_tiene_relacicion_con_la_primera_tabla**********************************************************************************************************************************
+INSERT INTO marca VALUES('03100','no tiene');
+INSERT INTO marca VALUES('03200','no tiene');
+INSERT INTO marca VALUES('03300','no tiene');
+INSERT INTO marca VALUES('03400','no tiene');
+INSERT INTO marca VALUES('03500','no tiene');
+
+
+
+***********************************************************
+
+select*from  productos  JOIN tipos 
+on id_productos = id_tipo JOIN marca
+on id_productos = id_marca;
+***********************************************************
+select NOMBRE,LA_MARCA from productos  
+inner JOIN marca  on id_productos = id_marca;
+***********************************************************
+select*from productos  left JOIN tipos  
+ON id_productos = id_tipo  and  numeor_de_tipo = el_tipo;
+***********************************************************
+select*from productos  right JOIN marca 
+ON id_productos = id_marca  and  numero_de_marca = la_marca;
+***********************************************************
+select*from productos Full JOIN tipos 
+ON id_productos = id_tipo  and  numeor_de_tipo = el_tipo Full JOIN marca
+ON id_productos = id_marca  and numero_de_marca = la_marca
+where  la_marca is  null or el_tipo is null or la_marca is null  ;
+***********************************************************
+SELECT el_tipo FROM productos JOIN tipos ON id_productos = id_tipo
+JOIN marca ON  id_productos = id_marca
+where el_tipo LIKE 'b%' or el_tipo LIKE 'p%';
+***********************************************************
